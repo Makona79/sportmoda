@@ -290,10 +290,11 @@ a {
   border-radius: 4px;
   padding: 12px 20px;
 }
-.middle__input img {
+.middle__input svg {
   position: absolute;
   top: 15px;
   right: 15px;
+  fill: var(--red-color);
 }
 .middle__input::-webkit-input-placeholder {
   font-size: 12px;
