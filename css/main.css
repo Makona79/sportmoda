@@ -160,6 +160,13 @@ a {
   position: relative;
 }
 
+input[type=text] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,6 +211,9 @@ a {
 .top__left-item img {
   margin-right: 5px;
 }
+.top__left-item a:hover {
+  text-decoration: underline;
+}
 .top__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +231,9 @@ a {
 .top__right-item {
   margin-right: 20px;
   font-weight: 600;
+}
+.top__right-item:hover {
+  text-decoration: underline;
 }
 .top__right-button {
   display: -webkit-inline-box;
@@ -289,12 +302,14 @@ a {
   border: 1px solid var(--red-color);
   border-radius: 4px;
   padding: 12px 20px;
+  font-family: inherit;
 }
-.middle__input svg {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  fill: var(--red-color);
+.middle__input input:focus {
+  background-color: #fff;
+  border-color: var(--red-color);
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(210, 51, 78, 0.24);
+  box-shadow: 0 0 0 0.2rem rgba(210, 51, 78, 0.24);
 }
 .middle__input::-webkit-input-placeholder {
   font-size: 12px;
@@ -316,11 +331,30 @@ a {
   font-size: 12px;
   color: #ababab;
 }
+.middle__inputbtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.middle__inputbtn svg {
+  fill: var(--red-color);
+}
 .middle__phone {
   position: relative;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.middle__phone:hover {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 .middle__phone img {
   position: absolute;
@@ -352,6 +386,16 @@ a {
 }
 .social__item {
   margin-right: 7px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.social__item:hover {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .bottom {
@@ -375,6 +419,15 @@ a {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.bottom__btn:hover {
+  -webkit-box-shadow: 0px 0px 20px var(--red-color);
+  box-shadow: 0px 0px 20px var(--red-color);
 }
 .bottom__list {
   display: -webkit-box;
@@ -394,6 +447,9 @@ a {
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
+}
+.bottom__link:hover {
+  text-decoration: underline;
 }
 .bottom__sale {
   display: -webkit-inline-box;
@@ -415,6 +471,9 @@ a {
 }
 .bottom__sale svg {
   margin-right: 5px;
+}
+.bottom__sale:hover {
+  text-decoration: underline;
 }
 
 .hero {
@@ -505,8 +564,6 @@ a {
 .main-slider__box {
   position: relative;
   z-index: 2;
-  width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,6 +607,15 @@ a {
   font-size: 16px;
   line-height: 140%;
   border-radius: 10px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.main-slider__btn:hover {
+  -webkit-box-shadow: 0px 0px 20px var(--red-color);
+  box-shadow: 0px 0px 20px var(--red-color);
 }
 .main-slider__pagination .swiper-pagination-bullet {
   background: #d0334d;
@@ -698,8 +764,8 @@ a {
 }
 .sale-slider__cartbtn {
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: 5px;
+  right: 5px;
 }
 .sale-slider__button::after {
   font-size: 20px;
@@ -791,6 +857,15 @@ a {
   background-color: var(--red-color);
   color: var(--light-color);
   border-bottom: 1px solid var(--light-color);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.sidebar__btn:hover {
+  -webkit-box-shadow: 0px 0px 20px var(--red-color);
+  box-shadow: 0px 0px 20px var(--red-color);
 }
 .sidebar__counter {
   position: absolute;
@@ -843,11 +918,20 @@ a {
   width: 59px;
   height: 59px;
   background: var(--red-color);
-  -webkit-box-shadow: 0px 0px 20px var(--red-color);
-  box-shadow: 0px 0px 20px var(--red-color);
+  -webkit-box-shadow: 0px 0px 5px var(--red-color);
+  box-shadow: 0px 0px 5px var(--red-color);
   z-index: 10;
   border-radius: 100%;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.btn-hot:hover {
+  -webkit-box-shadow: 0px 0px 20px var(--red-color);
+  box-shadow: 0px 0px 20px var(--red-color);
 }
 
 .ttt {
