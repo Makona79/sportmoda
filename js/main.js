@@ -7,7 +7,7 @@
   \*******************************/
 /***/ (() => {
 
-console.log('components');
+// console.log('components');
 
 /***/ }),
 
@@ -12964,15 +12964,21 @@ const mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_4__["default"](".hero__slid
 const sliderSale = new swiper__WEBPACK_IMPORTED_MODULE_4__["default"](".sale-slider", {
   loop: true,
   lazy: true,
-  // If we need pagination
-  pagination: {
-    el: ".sale-slider__pagination",
-    clickable: true
-  },
   // Navigation arrows
   navigation: {
     nextEl: ".sale-slider__button-next",
     prevEl: ".sale-slider__button-prev"
+  }
+});
+const news = new swiper__WEBPACK_IMPORTED_MODULE_4__["default"](".news-slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  lazy: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".news-slider__button-next",
+    prevEl: ".news-slider__button-prev"
   }
 });
 })();
